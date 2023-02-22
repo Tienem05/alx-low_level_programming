@@ -12,20 +12,20 @@ void times_table(void)
 			{
 				if (col != 0)
 				{
-					_putchar(' ');
-					_putchar(' ');
+					__putchar_(' ');
+					__putchar_(' ');
 				}
-				_putchar(mult + '0');
+				__putchar_(mult + '0');
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar((mult / 10) + '0');
-				_putchar((mult % 10) + '0');
+				__putchar_(' ');
+				__putchar_((mult / 10) + '0');
+				__putchar_((mult % 10) + '0');
 			}
 			if (col != 9)
-				_putchar(',');
+				__putchar_(',');
 		}
-		_putchar('\n');
+		__putchar_('\n');
 	}
 }

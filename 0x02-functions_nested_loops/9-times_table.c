@@ -20,8 +20,8 @@ void times_table(void)
 			{
 				if (col != 0)
 				{
-					_putchar(' ');
-					_putchar(' ');
+					__putchar_(' ');
+					__putchar_(' ');
 				}
 				_putchar(mult + '0');
 			}
