@@ -7,7 +7,8 @@
  * Return:Nothing!
  */
 int main(void)
-{	int i = 0;
+{
+	int i = 0;
 	long j = 1, k = 2, sum = k;
 
 	while (k + j < 4000000)
@@ -18,9 +19,10 @@ int main(void)
 			sum += k;
 
 		j = k - j;
+
 		++i;
 	}
 
-	printf("%1d\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
