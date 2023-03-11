@@ -10,19 +10,30 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int mul;
+	int count, num1, num2, res;
 
-	if (argc <= 2)
+	count = num1 = num2 = res = 0;
+	if (argc > 0)
 	{
-		printF("Error\n");
-		return (1);
+		while (count < argc)
+		{
+			if (argc == 3)
+			{
+				if (count == 1)
+					num1 = atoi(argv[count]);
+				else if (count == 2)
+					num2 = atoi(argv[count]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+			res = (num1 * num2);
+			count++;
+		}
+		printf("%d\n", res);
 	}
-	for (i = 1; i < argc; i++)
-	{
-		mul = (atoi(argv[i]) * atoi(argv[(i - 1)]));
-	}
-	printf("%d\n", mul);
-
 	return (0);
 }
+
