@@ -1,12 +1,15 @@
 #include "main.h"
-#include <stdlib>
-#include <limits.h>
+#include <stdlib.h>
+
+
 
 /**
- * malloc_checked - a function that allocates memory using malloc
- *  * @b: sizeof int
+ * malloc_checked - function that allocates memory using malloc
+ * @b: sizeof int
  * Return: nothing
  */
+
+
 
 void *malloc_checked(unsigned int b)
 {
