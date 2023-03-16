@@ -1,12 +1,8 @@
 #include <stdlib.h>
-
 #include "main.h"
 
-
-
 /**
- * _calloc - function that allocates memory for anarray
- * using malloc
+ * _calloc - function that allocates memory for an array, using malloc
  * @nmemb: input size 1
  * @size: input size bytes
  * Return: nothing
@@ -24,7 +20,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	_memset(cal, 0, nmemb * size);
 	return (cal);
 }
-
 /**
  * _memset - function that fills memory with a constant byte.
  *
@@ -40,6 +35,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	while (i < n)
 	{
+
 		*(s + i) = b;
 		i += 1;
 	}
