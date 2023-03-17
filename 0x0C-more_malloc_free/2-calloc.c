@@ -1,44 +1,24 @@
-#include <limits.h>
 #include "main.h"
-
+#include <limits.h>
 /**
- * _calloc - function that allocates memory for an array, using malloc
- * @nmemb: input size 1
- * @size: input size bytes
- * Return: nothing
+ * _calloc - allocates memory for an array using malloc
+ * @nmemb: elements of memory needed
+ * @size: size in bytes of each element
+ * Return: pointer to the allocated memory
  */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *cal;
+	unsigned int i;
+	char *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	cal = malloc(nmemb * size);
-	if (cal == NULL)
+	if (size >= UINT_MAX / nmemb || nmemb >= UINT_MAX / size)
 		return (NULL);
-	_memset(cal, 0, nmemb * size);
-	return (cal);
+	p = malloc(size * nmemb);
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i < nmemb * size; i++)
+		p[i] = 0;
+	return ((void *)p);
 }
-/**
- * _memset - function that fills memory with a constant byte.
- *
- * @s: mamory area to return
- * @b: constant byte
- * @n: size of bytes
- * Return: char
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i = 0;
-
-	while (i < n)
-	{
-
-		*(s + i) = b;
-		i += 1;
-	}
-	return (s);
-}
-
